@@ -38,3 +38,11 @@ $valor2 = 2;
 $restoDivisao = $valor1 % $valor2;
 echo "O resto da divisão de $valor1 por $valor2 é: " . $restoDivisao;
 echo "<br>";
+
+/**
+ * Exercico 1:
+ * Fazer a tabuada do 5, 6.
+ * 
+ * Exercicio 2:
+ * calcular as médias: Aritmetica, Ponderada e Harmonica.
+ */
