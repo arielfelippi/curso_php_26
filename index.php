@@ -115,10 +115,11 @@ $mediaHarmonica = round($quantidadeProvas / $mhDenominador, 2);
 echo "<br>A Média é: $mediaHarmonica<br>";
 
 // Calcular o volume de uma esfera com raio de 5cm.
-// Dicas: Elevar ao cubo -> 2 ** 3 = 8. PI = 3.14
+// Dicas: Elevar ao cubo N³ -> 2 ** 3 = 8. PI = 3.14
 // Formula: 4/3 * PI * R ao cubo.
+$raio = 5;
 CONST PI = 3.14;
-$raioAoCubo = 5 ** 3;
+$raioAoCubo = $raio ** 3;
 $fracao = 4/3;
 $volumeEsfera = $fracao * PI * $raioAoCubo;
 echo "<br>O volume da Esfera é: $volumeEsfera<br>";
@@ -151,12 +152,6 @@ $imc = round( $peso / ($altura ** 2), 2 );
 echo "<br>O IMC é: $imc<br>";
 
 
-// Converter graus Celsius para Fahrenheit. 35ºC -> ?ºF
-$celsius = 35;
-$fahrenheit = ($celsius * 9/5) + 32;
-echo "<br>O A temperatura em graus Fahrenheit é: $fahrenheit ºF <br>";
-
-
 // Aplicar a formula de Bhaskara para a seguinte equação do segundo grau:
 // $a = 1; $b = -3; $c =-4;
 // sqrt -> pow -> ** = potenciaciao
@@ -171,3 +166,66 @@ $x1 = (-$b + sqrt($delta)) / (2 * $a);
 $x2 = (-$b - sqrt($delta)) / (2 * $a);
 echo "<br>O X1 é: $x1 e o X2 é: $x2<br>";
 
+// Converter graus Celsius para Fahrenheit. 35ºC -> ?ºF
+$celsius = 35;
+$fahrenheit = ($celsius * 9/5) + 32;
+echo "<br>A temperatura $celsius ºC em graus Fahrenheit é: $fahrenheit ºF <br>";
+
+// Converter graus Fahrenheit para Celsius. 95ºF -> ?ºC (35).
+$f = 95;
+$grausFah = $f -32;
+$celsius = $grausFah / 1.8;
+echo "<br>A temperatura $fahrenheit ºF em graus Celsius é: $celsius ºC <br>";
+
+// Converter graus Celsius para Kelvin. 35ºC -> ?ºK.
+$celsius = 35;
+$kelvin = $celsius + 273.15;
+echo "<br>A temperatura $celsius ºC em graus kelvint é: $kelvin ºK <br>";
+
+
+// Converter graus Kelvin para Celsius. ?ºK -> 35ºC.
+$kelvin = 35;
+$celsius = $kelvin - 273.15;
+echo "<br>A temperatura $kelvin ºK em graus Celsius é: $celsius ºC <br>";
+
+/*
+$soma = 2;
+$soma += 5; // 7
+1 == 1
+2 != 3
+1 < 2 
+3 > 2
+0 <= 1
+6 >= 6
+$valor1 >= $valor2 //V
+6 >= 7
+$valor1 >= $valor2 //F
+7 >= 6
+$valor1 >= $valor2 //V
+
+E
+&&
+$tenhoDinherio && $tenhoVontadeTomarCafe
+OU 
+||
+$tenhoDinherio || $ganheiDinheiro
+
+Tabela verdade
+V V == V
+V F == F
+F V == F
+F F == F(v)
+*/
+
+$tenhoDinherio = true;
+$tenhoVontadeTomarCafe = true;
+
+if ($tenhoDinherio && $tenhoVontadeTomarCafe) {
+    echo "vou tomar café<br>";
+} else if ($tenhoDinherio && !$tenhoVontadeTomarCafe) {
+    echo "vou comprar chocolate<br>";
+} else {
+    echo "nao tenho vontade de nada<br>";
+}
+
+$soma = 10 + 10;
