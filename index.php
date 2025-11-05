@@ -229,3 +229,54 @@ if ($tenhoDinherio && $tenhoVontadeTomarCafe) {
 }
 
 $soma = 10 + 10;
+
+/* Simular o funcionamento de uma calculadora
+    utilizar if, else if, else.
+    Operadores: + - * /
+    Dica: vao ter uma variavel $operdaor.
+*/
+// Dados da calculadora
+$valor1 = 2;
+$operador = "/";
+$valor2 = 6;
+
+if ($valor1 < $valor2)  {
+    $temporario = $valor1;
+    $valor1 = $valor2;
+    $valor2 = $temporario; 
+}
+
+// Calculadora
+if ($operador == "+"){
+    $resultado = $valor1 + $valor2;
+    echo "A soma dos valores $valor1 + $valor2: $resultado";
+} else if ($operador == "-"){
+    $resultado = $valor1 - $valor2;
+    echo "A subtracao dos valores $valor1 - $valor2: $resultado";
+} else if ($operador == "*"){
+    $resultado = $valor1 * $valor2;
+    echo "A multiplicacao dos valores $valor1 * $valor2: $resultado";
+}  else if ($operador == "/"){
+    $resultado = $valor1 / $valor2;
+    echo "A divisão dos valores $valor1 / $valor2: $resultado";
+}
+
+
+/* Fazer exercicio 8 da pagina 15 da apostila.
+    NÃO utilizar array.
+    Utilizar os exercicios das médias e aplicar
+    a logica que valida se o aluno passou de ano.
+*/
+
+echo "<br><br>";   
+/**
+ * Fazer exercicio 9 da pagina 16.
+ */
+$nome=  "Fernanda";
+$idade = 21;
+
+if($idade >= 18){
+    echo "$nome é maior de 18 e tem $idade";
+} else{
+    echo "$nome não é maior de 18 e tem $idade";
+}
