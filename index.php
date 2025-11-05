@@ -236,6 +236,7 @@ $soma = 10 + 10;
     Dica: vao ter uma variavel $operdaor.
 */
 // Dados da calculadora
+echo "calculadora IF<br>";
 $valor1 = 2;
 $operador = "/";
 $valor2 = 6;
@@ -259,8 +260,45 @@ if ($operador == "+"){
 }  else if ($operador == "/"){
     $resultado = $valor1 / $valor2;
     echo "A divisão dos valores $valor1 / $valor2: $resultado";
+} else {
+    echo "O operador informado é invalido!";
 }
 
+
+// Dados da calculadora SWITCH CASE
+echo "<br>calculadora SWITCH CASE<br>";
+$valor1 = 2;
+$operador = "/";
+$valor2 = 6;
+
+if ($valor1 < $valor2)  {
+    $temporario = $valor1;
+    $valor1 = $valor2;
+    $valor2 = $temporario; 
+}
+
+switch($operador) {
+    case "+": 
+        $resultado = $valor1 + $valor2;
+        echo "A soma dos valores $valor1 + $valor2: $resultado";
+        break;
+    case "-" :  
+        $resultado = $valor1 - $valor2;
+        echo "A subtracao dos valores $valor1 - $valor2: $resultado";
+        break;
+    case "*" :  
+        $resultado = $valor1 * $valor2;
+        echo "A multiplicacao dos valores $valor1 * $valor2: $resultado";
+        break;
+    case "/" :  
+        $resultado = $valor1 / $valor2;
+        echo "A divisão dos valores $valor1 / $valor2: $resultado";
+        break;
+    default:
+        echo "O operador informado é invalido!";
+        break;
+}
+ 
 
 /* Fazer exercicio 8 da pagina 15 da apostila.
     NÃO utilizar array.
