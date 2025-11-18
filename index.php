@@ -365,9 +365,22 @@ for($contar = 0; $contar <= 10; $contar++) {
 echo "<br>";
 
 // Exibir os numeros em ordem DECRESCENTE(Maior para Menor - DESC) de 10 - 0.
+for($contar = 10; $contar >= 0; $contar--) {
+    echo "$contar<br>";
+ }
 
 // Contar e Exibir os numeros pares de 1 até 50;
+for($contar = 1; $contar <= 50; $contar++) {
+    
+    $restoDivisao = $contar % 2;
+    $ehDivisaoExata = $restoDivisao == 0;
 
+    if($ehDivisaoExata) {
+        echo "$contar é par";
+    } else {
+        echo "$contar é impar";
+    }
+}
 
 // Calcular o fatorial de um numero. Ex.: calcular o fatorial de 5 = 120.
 // 5!
@@ -379,8 +392,37 @@ echo "<br>";
 
 for($numero = $antecessor; $numero >= 1; $numero--) {
     // $fatorial = $fatorial * $numero; // 120
+    $fatorial = $fatorial * $numero;
     $fatorial *= $numero;
 }
-
 echo "Fatorial: $fatorial <br>";
+
+$fatorial = 5;
+$antecessor = $fatorial - 1;
+$numero = $antecessor;
+
+while ($numero >= 1) {
+
+    $fatorial = $fatorial * $numero;
+    $fatorial *= $numero;
+
+    $numero--;
+} // FIM WHILE
+
+$fatorial = 5;
+$antecessor = $fatorial - 1;
+$numero = $antecessor;
+
+do{
+    $fatorial = $fatorial * $numero;
+    $fatorial *= $numero;
+
+    $numero--;
+
+} while ($numero >= 1); // FIM DO WHILE
+
+/**
+ *  Fazer o mesmo exercicio utilizando FOR e WHILE.
+ * Exercicio: Encontrar os 5 primeiros numeros Primos.
+ */
 
