@@ -428,32 +428,65 @@
  * Exercicio: Encontrar os 5 primeiros numeros Primos.
  * Primos: 3, 5, 7, 11, 13.
  */
+// $contPrimos = 0;
+// $numeroAvaliado = 3;
+// $antecessor = $numeroAvaliado -1; //6
+
+// for ($divisor = 2; $divisor <= $antecessor; $divisor++) {
+
+//     if ($contPrimos == 5) {
+//         break;
+//     }
+
+//     $restoDivisao = $numeroAvaliado % $divisor; // 7 % 2 
+//     $ehDivisaoExata = $restoDivisao == 0;
+
+//     if ($ehDivisaoExata) {
+//         $numeroAvaliado++;
+//         $antecessor = $numeroAvaliado -1;
+//         $divisor = 1;
+//         continue;
+//     }
+
+//     if ($divisor == $antecessor) {
+//         echo "O numero $numeroAvaliado é primo!<br>";
+//         $numeroAvaliado++;
+//         $antecessor = $numeroAvaliado -1;
+//         $contPrimos++;
+//         $divisor = 1;
+//     }
+// } // FIM do FOR
+
+
+/**
+ *  Fazer o mesmo exercicio utilizando FOR e WHILE.
+ * Exercicio: Encontrar os 5 primeiros numeros Primos.
+ * Primos: 3, 5, 7, 11, 13.
+ */
 $contPrimos = 0;
 $numeroAvaliado = 3;
-$antecessor = $numeroAvaliado -1; //6
 
+for ($numeroAvaliado = 3; $contPrimos  < 5; $numeroAvaliado++) {
+    
+    $antecessor = $numeroAvaliado -1;
+    $ehPrimo = true;
 
-for ($divisor = 2; $divisor <= $antecessor; $divisor++) {
+    for($divisor = 2; $divisor <= $antecessor; $divisor++) {
 
-    if ($contPrimos == 5) {
-        break;
-    }
+        $restoDivisao = $numeroAvaliado % $divisor; // 7 % 2 
+        $ehDivisaoExata = $restoDivisao == 0;
 
-    $restoDivisao = $numeroAvaliado % $divisor; // 7 % 2 
-    $ehDivisaoExata = $restoDivisao == 0;
-
-    if ($ehDivisaoExata) {
-        $numeroAvaliado++;
-        $antecessor = $numeroAvaliado -1;
-        $divisor = 1;
-        continue;
-    }
-
-    if ($divisor == $antecessor) {
-        echo "O numero $numeroAvaliado é primo!<br>";
-        $numeroAvaliado++;
-        $antecessor = $numeroAvaliado -1;
+        if ($ehDivisaoExata) {
+            $ehPrimo = false;
+            break;
+        }
+    
+    } // Fim FOR
+    
+    if($ehPrimo == true){
+        echo "O número $numeroAvaliado é PRIMO!<br>";
         $contPrimos++;
-        $divisor = 1;
     }
-} // FIM do FOR
+
+
+}  // Fim FOR
