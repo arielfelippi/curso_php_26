@@ -91,3 +91,20 @@ for ($i = 0; $i < 5 ; $i++) {
 // echo "<br> implode contador:<br>";
 // echo implode(", ", $salvarPrimos);
 
+/**
+ * Somar arrays:
+ * $arrayInicio = [5, 10, 50];
+ * $arrayFim = [10, 90, 30];
+ * Resultado esperado:
+ * $arraySoma[15, 100, 80];
+ */
+
+
+/**
+ * Multiplicar arrays:
+ * $arrayInicio = [5, 10, 8];
+ * $arrayFim = [10, 100, 3];
+ * Resultado esperado:
+ * $arrayMultiplicado[50, 1000, 24];
+ */
+
