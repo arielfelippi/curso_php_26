@@ -3,6 +3,7 @@
 // 2 ** 3; // ** -> pow -> potenciacao 2³.
 
 const SESSENTA = 60;
+const SEGUNDOS_NO_DIA = 86400;
 
 // $nome = "Bruno";
 // $idade = 18;
@@ -42,9 +43,8 @@ function calcularSegundosEmHoras($horas) {
      echo "<br>";
 }
 
-// $horas = "01:00:00";
-
-$horas = Date("H:i:s");
+$horas = "01:00:00";
+$horas = Date("H:i:s"); // "01:00:00" || "21:38:05"
 
 calcularSegundosEmHoras($horas);
 
@@ -102,3 +102,17 @@ function calcularPrimos($numeroAvaliado) {
         }
     }
 }
+
+
+/**
+ * Exercicio para as Férias.
+ * Calcular o tempo de duração de um jogo.
+ * Ex.: Jogo de futebol. Tempo de duração 90 minutos || 1 hora e meia.
+ * 
+ * A-) Começa: 21 horas, qual a hora do termino desse jogo?
+ * R. 22:30:00
+ * 
+ * B-) Começa: 23 horas e 45 minutos, qual a hora do termino desse jogo?
+ * R. 01:15:00
+ */
+
