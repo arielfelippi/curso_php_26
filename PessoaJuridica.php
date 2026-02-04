@@ -5,6 +5,7 @@ define("QUEBRAR_LINHA", "<br>");
 
 class PessoaJuridica extends PessoaAbstract {
     public $CNPJ;
+    public $razaoSocial;
 
     public function __construct()
     {

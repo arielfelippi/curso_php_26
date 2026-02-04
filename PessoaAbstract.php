@@ -20,7 +20,7 @@ abstract class PessoaAbstract {
         $this->idade = "";
         $this->logradouro = "";
         $this->cep = "";
-        $this->bairo = "";
+        $this->bairro = "";
         $this->cidade = "";
         $this->estado = "";
         $this->numero = "";
