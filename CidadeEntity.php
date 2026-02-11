@@ -10,6 +10,7 @@ require_once "./EntityAbstract.php";
     public function __construct()
     {
         $this->tabelaNome = "cidade";
+        // $this->deletar(1);
     }
 
  }

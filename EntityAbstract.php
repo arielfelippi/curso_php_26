@@ -34,7 +34,7 @@ abstract class EntityAbstract implements EntityInterface {
     }
     
     public function deletar($id) {
-
+        $sql = "DELETE FROM $this->tabelaNome WHERE id = $id;";
     }
     
 }
