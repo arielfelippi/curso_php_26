@@ -3,6 +3,8 @@
 $conexao = mysqli_connect("localhost", "aluno", "1234", "curso_php_26");
 
 // só entra aqui se deu erro ao conectar com o banco.
+// if ($conexao === false) { ... }
+// PHP_EOL == \n || <br/>
 if (!$conexao) {
     echo "Error: Falha ao conectar-se com o banco de dados MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;

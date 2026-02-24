@@ -20,10 +20,10 @@ $irParaListagem = empty($dados) || !isset($dados["rota"]);
 
 if ($irParaListagem) {
 
-    $usuario = $usuarioModel->obter(8);
+    $usuario = $usuarioEntity->obterTodos();
 
     foreach($usuario as $idx => $valor) {
-        echo $valor->nome;
+        echo "$valor->id - $valor->nome <br>";
     }
 
     return;

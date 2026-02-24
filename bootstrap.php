@@ -5,4 +5,4 @@ require_once "./BancoDeDados.php";
 require_once "./UsuarioEntity.php";
 
 $banco = new BancoDados($conexao);
-$usuarioModel = new UsuarioEntity($banco);
+$usuarioEntity = new UsuarioEntity($banco);

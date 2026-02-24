@@ -12,10 +12,10 @@ interface EntityInterface {
 // Model || Entity, Representa a tabela do banco na programacao.
 abstract class EntityAbstract implements EntityInterface {
     public $id;
-    public $tabelaNome;
     public $criadoEm;
     public $atualizadoEm;
     public $usuarioAlteracao;
+    public $tabelaNome;
     public $bancoDeDados;
 
     public function __construct(BancoDados $banco)
@@ -28,12 +28,13 @@ abstract class EntityAbstract implements EntityInterface {
     }
     
     public function obter($id) {
-         $sql = "SELECT * FROM $this->tabelaNome WHERE id = $id";
+        $sql = "SELECT * FROM $this->tabelaNome WHERE id = $id";
         return $this->bancoDeDados->execQuery($sql);
     }
     
     public function obterTodos($filtros = "") {
-
+        $sql = "SELECT * FROM $this->tabelaNome";
+        return $this->bancoDeDados->execQuery($sql);
     }
     
     public function atualizar($id) {

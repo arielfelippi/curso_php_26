@@ -6,7 +6,7 @@ class BancoDados {
     
     public function __construct($conexao)
     {
-        $this->conexao= $conexao;
+        $this->conexao = $conexao;
     }
     
     public function fecharConexao()
