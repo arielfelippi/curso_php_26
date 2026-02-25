@@ -15,21 +15,8 @@
 require_once "./bootstrap.php";
 
 $dados = $_REQUEST;
-
-$irParaListagem = empty($dados) || !isset($dados["rota"]);
-
-if ($irParaListagem) {
-
-    $usuario = $usuarioEntity->obterTodos();
-
-    foreach($usuario as $idx => $valor) {
-        echo "$valor->id - $valor->nome <br>";
-    }
-
-    return;
-}
-
-$rota = $dados["rota"];
+$rota = $dados["rota"] ?? "";
+$usuarios = $usuarioEntity->obterTodos() ?? [];
 
 if ($rota == "listar") {
     echo "estou na listar";
@@ -58,3 +45,6 @@ if ($rota == "excluir") {
     return;
 }
  
+include_once "./form-usuario.php";
+
+?>

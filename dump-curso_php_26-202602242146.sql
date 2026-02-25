@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: curso_php_26
 -- ------------------------------------------------------
--- Server version	5.5.5-10.6.22-MariaDB-0ubuntu0.22.04.1
+-- Server version	5.5.5-10.6.23-MariaDB-0ubuntu0.22.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -181,9 +181,13 @@ DROP TABLE IF EXISTS `usuario`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuario` (
   `id` smallint(6) NOT NULL AUTO_INCREMENT,
-  `criado_em` timestamp NULL DEFAULT NULL,
-  `atualizado_em` timestamp NULL DEFAULT NULL,
   `nome` varchar(100) DEFAULT NULL,
+  `nomeUsuario` varchar(100) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 1,
+  `cadastroPreenchido` tinyint(4) NOT NULL DEFAULT 0,
+  `criado_em` datetime NOT NULL DEFAULT current_timestamp(),
+  `atualizado_em` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -194,7 +198,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,NULL,NULL,'Ariel'),(2,NULL,NULL,'Rafael'),(3,NULL,NULL,'Felipe'),(4,NULL,NULL,'Bruno'),(5,NULL,NULL,'Kevin'),(6,NULL,NULL,'Henrique B'),(7,NULL,NULL,'Tiago'),(8,NULL,NULL,'Pedro'),(9,NULL,NULL,'Henrique Z');
+INSERT INTO `usuario` VALUES (1,'Ariel','ariel_usuario','ariel@infoserv.com',1,0,'2026-02-24 19:32:23','2026-02-24 21:45:21'),(2,'Rafael','','',1,0,'2026-02-24 19:32:23',NULL),(3,'Felipe','','',1,0,'2026-02-24 19:32:23',NULL),(4,'Bruno','','',1,0,'2026-02-24 19:32:23',NULL),(5,'Kevin','','',1,0,'2026-02-24 19:32:23',NULL),(6,'Henrique B','','',1,0,'2026-02-24 19:32:23',NULL),(7,'Tiago','','',1,0,'2026-02-24 19:32:23',NULL),(8,'Pedro','','',1,0,'2026-02-24 19:32:23',NULL),(9,'Henrique Z','','',1,0,'2026-02-24 19:32:23',NULL);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,4 +215,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-03 21:36:24
+-- Dump completed on 2026-02-24 21:46:10
